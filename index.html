@@ -2,45 +2,96 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Banco clon</title>
+  <title>Banco de Bogotá</title>
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="css/styles.css">
+
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="custom-navbar">
-    <div class="container d-flex align-items-center justify-content-between">
+  <nav class="header">
+  <div class="header__container">
 
-      <div class="logo d-flex align-items-center">
-        <img src="img/logo.svg" alt="Banco de Bogotá" class="logo-img">
-      </div>
+    <div class="header__logo"></div>
 
-      <div class="switch-box">
-        <span class="active">Personas</span>
-        <span>Empresas</span>
-      </div>
-
-      <ul class="menu d-flex">
-        <li>Productos ▾</li>
-        <li>Pagos en línea ▾</li>
-        <li>Atención al cliente ▾</li>
-      </ul>
-
-      <button class="btn-login">Ingresar ▾</button>
-
+    <!-- Switch -->
+    <div class="header__switch">
+      <span class="active">Personas</span>
+      <span>Empresas</span>
     </div>
-  </nav>
 
-  <!-- 👇 Aquí sigue el resto de la página -->
-  <div>
+    <!-- Menú -->
+    <ul class="header__menu">
+
+  <li id="menu-productos">
+    Productos
+    <i class="fa-solid fa-chevron-down"></i>
+
+    <div class="mega-menu" id="megaMenuProductos">
+      <div class="mega-content">
+
+        <div class="mega-column">
+          <h6>AHORRAR E INVERTIR</h6>
+          <a href="#">Cuentas de ahorro ›</a>
+          <a href="#">Cuenta corriente ›</a>
+          <a href="#">CDT e inversión ›</a>
+        </div>
+
+        <div class="mega-column">
+          <h6>SOLUCIONES DE CRÉDITO</h6>
+          <a href="#">Tarjetas de crédito ›</a>
+          <a href="#">Créditos ›</a>
+          <a href="#">Leasing ›</a>
+        </div>
+
+        <div class="mega-column">
+          <h6>TRANSFERENCIAS INTERNACIONALES</h6>
+          <a href="#">Giros internacionales y remesas ›</a>
+
+          <h6 class="mega-title-space">PROTEGERSE</h6>
+          <a href="#">Seguros y asistencias ›</a>
+        </div>
+
+      </div>
+    </div>
+  </li>
+
+  <li>
+    Pagos en línea
+    <i class="fa-solid fa-chevron-down"></i>
+  </li>
+
+  <li>
+    Atención al cliente
+    <i class="fa-solid fa-chevron-down"></i>
+  </li>
+
+</ul>
+
+
+    <!-- Botón -->
+    <div class="header__actions">
+      <button class="btn-login header__container__login__dropdown__toggle">
+        Ingresar
+        <i class="fas fa-chevron-down"></i>
+      </button>
+    </div>
+
   </div>
+</nav>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="js/main.js"></script>
 
 </body>
 </html>
