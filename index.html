@@ -6,93 +6,458 @@
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  
-  <link rel="stylesheet" href="css/styles.css">
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- CSS propio -->
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
   <nav class="header">
-  <div class="header__container">
+    <div class="header__container">
 
-    <div class="header__logo"></div>
+      <div class="header__logo"></div>
 
-    <!-- Switch -->
-    <div class="header__switch">
-      <span class="active">Personas</span>
-      <span>Empresas</span>
+      <div class="header__switch">
+        <span class="active">Personas</span>
+        <span>Empresas</span>
+      </div>
+
+      <ul class="header__menu">
+
+        <li id="menu-productos">
+          Productos
+          <i class="fa-solid fa-chevron-down"></i>
+
+          <div class="mega-menu" id="megaMenuProductos">
+            <div class="mega-content">
+
+              <div class="mega-column">
+                <h6>AHORRAR E INVERTIR</h6>
+                <a href="#">Cuentas de ahorro ›</a>
+                <a href="#">Cuenta corriente ›</a>
+                <a href="#">CDT e inversión ›</a>
+              </div>
+
+              <div class="mega-column">
+                <h6>SOLUCIONES DE CRÉDITO</h6>
+                <a href="#">Tarjetas de crédito ›</a>
+                <a href="#">Créditos ›</a>
+                <a href="#">Leasing ›</a>
+              </div>
+
+              <div class="mega-column">
+                <h6>TRANSFERENCIAS INTERNACIONALES</h6>
+                <a href="#">Giros internacionales y remesas ›</a>
+
+                <h6 class="mega-title-space">PROTEGERSE</h6>
+                <a href="#">Seguros y asistencias ›</a>
+              </div>
+
+            </div>
+          </div>
+        </li>
+
+        <li>
+          Pagos en línea
+          <i class="fa-solid fa-chevron-down"></i>
+        </li>
+
+        <li>
+          Atención al cliente
+          <i class="fa-solid fa-chevron-down"></i>
+        </li>
+
+      </ul>
+
+      <div class="header__actions">
+        <button class="btn-login header__container__login__dropdown__toggle">
+          Ingresar
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+      </div>
+
     </div>
+  </nav>
 
-    <!-- Menú -->
-    <ul class="header__menu">
+  <section class="hero-carousel">
+    <div id="carouselBanco" class="carousel slide" data-bs-ride="carousel">
 
-  <li id="menu-productos">
-    Productos
-    <i class="fa-solid fa-chevron-down"></i>
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselBanco" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#carouselBanco" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#carouselBanco" data-bs-slide-to="2"></button>
+      </div>
 
-    <div class="mega-menu" id="megaMenuProductos">
-      <div class="mega-content">
+      <div class="carousel-inner">
 
-        <div class="mega-column">
-          <h6>AHORRAR E INVERTIR</h6>
-          <a href="#">Cuentas de ahorro ›</a>
-          <a href="#">Cuenta corriente ›</a>
-          <a href="#">CDT e inversión ›</a>
+        <div class="carousel-item active">
+          <img src="img/carousel/lucho y silvestre.png" class="d-block w-100 carousel-img" alt="Banner 1">
+
+          <div class="carousel-caption-custom">
+            <h1>¡Disfruta la nueva<br>Experiencia AVAL!</h1>
+            <p>Vive la Copa Mundial de la FIFA 2026™, gracias a Visa. Solicita <br> tu Tarjeta Visa, inscríbete y participa por premios increíbles.</p>
+
+            <div class="carousel-actions">
+              <a href="#" class="btn-main">Pídela y úsala</a>
+              <a href="#" class="btn-link-custom">Conoce más aquí</a>
+            </div>
+          </div>
         </div>
 
-        <div class="mega-column">
-          <h6>SOLUCIONES DE CRÉDITO</h6>
-          <a href="#">Tarjetas de crédito ›</a>
-          <a href="#">Créditos ›</a>
-          <a href="#">Leasing ›</a>
+        <div class="carousel-item">
+          <img src="img/carousel/cdt invierte.png" class="d-block w-100 carousel-img" alt="Banner 2">
+
+          <div class="carousel-caption-custom">
+            <h6>PERSONAS</h6>
+            <h1>Tu CDT digital con tasa de hasta 12% E.A.</h1>
+            <p>¡Haz que tus ahorros crezcan! Abre un CDT digital desde <br> $100.000 a un plazo mínimo de 30 días.</p>
+
+            <div class="carousel-actions">
+              <a href="#" class="btn-main">Quiero mi CDT</a>
+            </div>
+          </div>
         </div>
 
-        <div class="mega-column">
-          <h6>TRANSFERENCIAS INTERNACIONALES</h6>
-          <a href="#">Giros internacionales y remesas ›</a>
+        <div class="carousel-item">
+          <img src="img/carousel/familia aeropuerto.png" class="d-block w-100 carousel-img" alt="Banner 3">
 
-          <h6 class="mega-title-space">PROTEGERSE</h6>
-          <a href="#">Seguros y asistencias ›</a>
+          <div class="carousel-caption-custom">
+            <h6>SOLICITUD DIGITAL</h6>
+            <h1>¿DevoluciÓN en TODAS tus compras ON -line?</h1>
+            <p>Recibe cashback del 5% en TODAS tus compras en línea con la <br> Tarjeta de Crédito ON</p>
+
+            <div class="carousel-actions">
+              <a href="#" class="btn-main">Solicítala aquí</a>
+              <a href="#" class="btn-link-custom">Conoce más</a>
+            </div>
+          </div>
         </div>
 
       </div>
     </div>
-  </li>
+  </section>
 
-  <li>
-    Pagos en línea
-    <i class="fa-solid fa-chevron-down"></i>
-  </li>
+  <section class="quick-access">
 
-  <li>
-    Atención al cliente
-    <i class="fa-solid fa-chevron-down"></i>
-  </li>
+  <!-- Flecha izquierda -->
+  <button class="nav-btn left">
+    <i class="fa-solid fa-chevron-left"></i>
+  </button>
 
-</ul>
+  <!-- Contenedor -->
+  <div class="cards-container" id="cardsContainer">
 
+    <div class="card-item">
+      <div class="card-icon">
+        <img src="img/slider icons/phone-mobile.svg" alt="Soluciones digitales">
+      </div>
+      <span>Soluciones digitales</span>
+    </div>
 
-    <!-- Botón -->
-    <div class="header__actions">
-      <button class="btn-login header__container__login__dropdown__toggle">
-        Ingresar
-        <i class="fas fa-chevron-down"></i>
-      </button>
+    <div class="card-item">
+      <div class="card-icon">
+        <img src="img/slider icons/laptop.svg" alt="Nuestros canales">
+      </div>
+      <span>Nuestros canales</span>
+    </div>
+
+    <div class="card-item">
+      <div class="card-icon">
+        <img src="img/slider icons/digital-shift.svg" alt="Turnos virtuales">
+      </div>
+      <span>Turnos virtuales</span>
+    </div>
+
+    <div class="card-item">
+      <div class="card-icon">
+        <img src="img/slider icons/ubication-map.svg" alt="Puntos de atención">
+      </div>
+      <span>Puntos de atención</span>
+    </div>
+
+    <div class="card-item">
+      <div class="card-icon">
+        <img src="img/slider icons/coin-cash.svg" alt="Relación con inversionista">
+      </div>
+      <span>Relación con inversionista</span>
+    </div>
+
+    <div class="card-item">
+      <div class="card-icon">
+        <img src="img/slider icons/cash-bill.svg" alt="Aval Pay Center">
+      </div>
+      <span>Aval Pay Center</span>
+    </div>
+
+    <div class="card-item">
+      <div class="card-icon">
+        <img src="img/slider icons/padlock-lock.svg" alt="Aval Pay Center">
+      </div>
+      <span>Seguridad bancaria</span>
+    </div>
+
+    <div class="card-item">
+      <div class="card-icon">
+        <img src="img/slider icons/credito-vehiculo.svg" alt="Aval Pay Center">
+      </div>
+      <span>Facilpass</span>
+    </div>
+
+    <div class="card-item">
+      <div class="card-icon">
+        <img src="img/slider icons/call-center.svg" alt="Aval Pay Center">
+      </div>
+      <span>Disponibilidad de canales</span>
+    </div>
+
+    <div class="card-item">
+      <div class="card-icon">
+        <img src="img/slider icons/card.svg" alt="Aval Pay Center">
+      </div>
+      <span>Canal cafetero</span>
     </div>
 
   </div>
-</nav>
+
+  <!-- Flecha derecha -->
+  <button class="nav-btn right">
+    <i class="fa-solid fa-chevron-right"></i>
+  </button>
+
+</section>
+
+<section class="promo-section">
+
+  <div class="promo-card">
+    <div class="promo-content">
+      <h2>¡Vamos al estadio con todo incluido!</h2>
+      <p>Solicita tu tarjeta de crédito Visa y gana un Golden Ticket o Black Ticket para ir a la Copa Mundial de la FIFA 2026™ con todo pago, gracias a Visa.</p>
+      <a href="#" class="promo-btn">Conoce más ›</a>
+    </div>
+
+    <div class="promo-image">
+      <img src="img/promotional cards/destacado-corto-black-ticket-sin-banderas.png" alt="Tarjetas Visa">
+    </div>
+  </div>
+
+  <div class="promo-card reverse">
+    <div class="promo-image">
+      <img src="img/promotional cards/mujer-joven-sonriendo-aval-fiduciarias-destacado-corto.png" alt="Bono digital">
+    </div>
+
+    <div class="promo-content">
+      <small>SOLICITUD 100% DIGITAL</small>
+      <h2>¡Participa por un bono digital de <br> $500.000*!</h2>
+      <p>Con un crédito de libre inversión, tus planes no tienen por qué esperar. Solicítalo y ten la oportunidad de ganar el bono.</p>
+      <a href="#" class="promo-btn">Solícitalo ya ›</a>
+    </div>
+  </div>
+
+  <div class="promo-card">
+    <div class="promo-content">
+      <h2>¡Acumula millas en cada compra con tu <br> tarjeta de crédito Latam Pass!</h2>
+
+      <ul>
+        <li>Recibe hasta <strong>3.500 millas</strong> de bienvenida por compras.</li>
+        <li>Devolución de hasta el <strong>30%</strong> en compra anual de tiquetes.</li>
+        <li>1 equipaje extra de <strong>hasta 23 KG</strong> en bodega.</li>
+        <li>Cuota de manejo <strong>gratis</strong> los primeros 3 meses.</li>
+      </ul>
+
+      <a href="#" class="promo-btn">Abrir ahora ›</a>
+    </div>
+
+    <div class="promo-image">
+      <img src="img/promotional cards/tarjeta-latam-pass-platinum-v2-desk.png" alt="Ahorro">
+    </div>
+  </div>
+
+</section>
+
+<section class="interest-section">
+  <h2>También podría interesarte</h2>
+
+  <div class="interest-grid">
+
+    <article class="interest-card">
+      <span class="tag">Financia hasta el 100%*</span>
+      <h3>¿Listo para arrancar?</h3>
+      <p>Cumple el sueño de tener vehículo propio. *Aprobación sujeta a perfil del cliente.</p>
+
+      <img src="img/podria interesarte/credito-de-vehiculo-educacion-financiera_1.png" class="interest-img" alt="Vehículo">
+
+      <div class="interest-info">
+        <p>
+          <img src="img/podria interesarte/podria interesarte icons/calendar-check.svg" class="icon-img">
+          Plazo hasta 84 meses.
+        </p>
+        <p>
+          <img src="img/podria interesarte/podria interesarte icons/pfm.svg" class="icon-img">
+          Tasa de interés fija según estudio de crédito.
+        </p>
+      </div>
+
+      <a href="#" class="interest-btn">¡Solícitalo aquí!</a>
+    </article>
+
+    <article class="interest-card">
+      <span class="tag">Sin cuota de manejo</span>
+      <h3>Cuenta Fácil</h3>
+      <p>Tu cuenta de ahorros sin cuota de manejo en todo momento.</p>
+
+      <img src="img/podria interesarte/mano-animada-con-tarjeta-debito-clasica.png" class="interest-img" alt="Cuenta">
+
+      <div class="interest-info">
+        <p>
+          <img src="img/podria interesarte/podria interesarte icons/transfers.svg" class="icon-img">
+          Transferencias gratis con tu llave Bre-b.
+        </p>
+        <p>
+          <img src="img/podria interesarte/podria interesarte icons/banca-movil.svg" class="icon-img">
+          Paga fácil tus facturas, servicios y más.
+        </p>
+      </div>
+
+      <a href="#" class="interest-btn">¡Solícitala ahora!</a>
+    </article>
+
+    <article class="interest-card">
+      <span class="tag">Tarjeta de Crédito y Débito</span>
+      <h3>¡Viaja ahora!</h3>
+      <p>Un beneficio especial te espera en tu próximo destino. Aprovecha.</p>
+
+      <img src="img/podria interesarte/viajes-banco-de-bogota.png" class="interest-img" alt="Viaje">
+
+      <div class="interest-info">
+        <p>
+          <img src="img/podria interesarte/podria interesarte icons/cards.svg" class="icon-img">
+          Paga con tarjetas Débito y Crédito Visa y Mastercard.
+        </p>
+        <p>
+          <img src="img/podria interesarte/podria interesarte icons/pfm.svg" class="icon-img">
+          Aplica en hoteles, tours, traslados, renta de autos y seguros.
+        </p>
+      </div>
+
+      <a href="#" class="interest-btn">Reserva tu viaje</a>
+    </article>
+
+  </div>
+</section>
+
+<section class="info-banners">
+
+  <div class="info-banner info-banner-blue">
+    <div class="info-content">
+      <h2>¡Tasa de hasta 12% E.A. para abrir tu CDT digital!</h2>
+      <p>Disfruta más rentabilidad con un CDT digital y haz que tus ahorros crezcan. Ábrelo desde $100.000 a un plazo mínimo de 30 días.</p>
+      <a href="#" class="outline-btn">Quiero mi CDT ›</a>
+    </div>
+
+    <img src="img/banners/cdt-invierte-tasa-hasta-12-porciento-banner-slim.png" alt="CDT digital">
+  </div>
+
+  <div class="info-banner">
+    <img src="img/banners/fraude-mensajes-llamadas-tuplus-destacado-corto.png" alt="Fraude" class="info-img-left">
+
+    <div class="info-content">
+      <h2>¡Ganaste 12.000 puntos tuplús! Redímelos ahora</h2>
+      <p>Si recibes un mensaje o llamada como este, es una estafa para robar tu información. El banco no te solicitará claves, información personal o digitar en tu celular.</p>
+      <a href="#" class="outline-btn">Conoce más aquí ›</a>
+    </div>
+  </div>
+
+</section>
+
+<section class="help-section">
+
+  <div class="help-header">
+    <h2>¿Necesitas ayuda?</h2>
+    <p>Para que resuelvas todas tus dudas con tranquilidad, consulta directamente los canales oficiales del Banco de Bogotá.</p>
+
+    <div class="help-tabs">
+      <button class="tab active">Canales de atención</button>
+      <button class="tab">Puntos de atención</button>
+    </div>
+  </div>
+
+  <div class="help-cards">
+
+    <!-- Card 1 -->
+    <div class="help-card">
+      <div class="help-icon">
+        <img src="img/ayuda icons/mobile-transfer.svg" alt="App BancaMóvil">
+      </div>
+      <h3>Descarga la App Banca Móvil</h3>
+      <p>Diseñamos una aplicación para que hagas transacciones y consultas.</p>
+      <a href="#">Usar la app ›</a>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="help-card">
+      <div class="help-icon">
+        <img src="img/ayuda icons/phone.svg" alt="Llámanos">
+      </div>
+      <h3>Llámanos a la Servilínea</h3>
+      <p>Desde cualquier parte del país puedes llamarnos y tendrás atención...</p>
+      <a href="#">Ver líneas ›</a>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="help-card">
+      <div class="help-icon">
+        <img src="img/ayuda icons/whatsapp.svg" alt="WhatsApp">
+      </div>
+      <h3>Comunícate 24/7 vía WhatsApp</h3>
+      <p>Infórmate sobre tus productos y resuelve dudas en cualquier momento.</p>
+      <a href="#">Iniciar conversación ›</a>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="help-card">
+      <div class="help-icon">
+        <img src="img/ayuda icons/question.svg" alt="PQRS">
+      </div>
+      <h3>PQRS</h3>
+      <p>Nos interesa conocer tus preguntas, quejas, reclamos, solicitudes y felicitaciones.</p>
+      <a href="#">Hacer PQRS ›</a>
+    </div>
+
+  </div>
+
+  <div class="tab-content" id="puntos-content">
+
+  <div class="points-banner">
+    
+    <div class="points-text">
+      <h2>Nuestras oficinas cerca de tí</h2>
+      <p>Encuentra un punto de atención presencial con tu ubicación.</p>
+      <a href="#" class="outline-btn">Buscar ›</a>
+    </div>
+
+    <div class="points-img">
+      <img src="img/canal atencion/mujer-sonriendo-viendo-tablet-2.jpg" alt="">
+    </div>
+
+  </div>
+
+</div>
+
+</section>
+
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+  <!-- JS propio -->
   <script src="js/main.js"></script>
 
 </body>
 </html>
-
