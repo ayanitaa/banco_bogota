@@ -17,6 +17,8 @@ const carousel = new bootstrap.Carousel('#carouselBanco', {
   pause: false
 });
 
+// Navegación del carrusel (cards quick access)
+
 const container = document.getElementById("cardsContainer");
 
 function getCardStep() {
@@ -67,4 +69,26 @@ tabs.forEach((tab, index) => {
     }
 
   });
+});
+
+const footerColumns = document.querySelectorAll(".footer-links > div");
+
+footerColumns.forEach((column) => {
+  const title = column.querySelector("h4");
+
+  title.addEventListener("click", () => {
+    column.classList.toggle("active");
+  });
+});
+
+const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+const mobileCloseBtn = document.getElementById("mobileCloseBtn");
+const mobileMenuPanel = document.getElementById("mobileMenuPanel");
+
+mobileMenuBtn.addEventListener("click", () => {
+  mobileMenuPanel.classList.add("active");
+});
+
+mobileCloseBtn.addEventListener("click", () => {
+  mobileMenuPanel.classList.remove("active");
 });

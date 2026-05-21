@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Banco de Bogotá</title>
 
   <!-- Bootstrap -->
@@ -12,6 +13,7 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <!-- CSS propio -->
   <link rel="stylesheet" href="css/styles.css">
@@ -81,10 +83,37 @@
           Ingresar
           <i class="fa-solid fa-chevron-down"></i>
         </button>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+    <i class="fa-solid fa-bars"></i>
+    <span>Menú</span>
+  </button>
       </div>
 
     </div>
   </nav>
+
+  <div class="mobile-menu-panel" id="mobileMenuPanel">
+  <div class="mobile-menu-top">
+    <div class="header__logo"></div>
+
+    <button class="mobile-close-btn" id="mobileCloseBtn">
+      <i class="fa-solid fa-xmark"></i>
+      <span>Menú</span>
+    </button>
+  </div>
+
+  <div class="mobile-switch">
+    <span class="active">Personas</span>
+    <span>Empresas</span>
+  </div>
+
+  <div class="mobile-menu-list">
+    <div>Productos <i class="fa-solid fa-chevron-down"></i></div>
+    <div>Pagos en línea <i class="fa-solid fa-chevron-down"></i></div>
+    <div>Atención al cliente <i class="fa-solid fa-chevron-down"></i></div>
+  </div>
+</div>
 
   <section class="hero-carousel">
     <div id="carouselBanco" class="carousel slide" data-bs-ride="carousel">
@@ -255,7 +284,8 @@
     <div class="promo-content">
       <small>SOLICITUD 100% DIGITAL</small>
       <h2>¡Participa por un bono digital de <br> $500.000*!</h2>
-      <p>Con un crédito de libre inversión, tus planes no tienen por qué esperar. Solicítalo y ten la oportunidad de ganar el bono.</p>
+      <p> <strong>Con un crédito de libre inversión, tus planes no tienen por qué esperar.</strong> Solicítalo y ten la oportunidad de ganar el bono.</p>
+      <p>*Conoce términos y condiciones.</p> 
       <a href="#" class="promo-btn">Solícitalo ya ›</a>
     </div>
   </div>
@@ -271,7 +301,7 @@
         <li>Cuota de manejo <strong>gratis</strong> los primeros 3 meses.</li>
       </ul>
 
-      <a href="#" class="promo-btn">Abrir ahora ›</a>
+      <a href="#" class="promo-btn">Solicítala ahora ›</a>
     </div>
 
     <div class="promo-image">
@@ -463,8 +493,8 @@
 
   <!-- TIENDAS COMO IMAGEN -->
   <div class="stores">
-    <img src="img/footer/googleplay.svg" alt="Google Play">
-    <img src="img/footer/appstore.svg" alt="App Store">
+    <img src="img/footer/googleplay.svg" class="store-google">
+    <img src="img/footer/appstore.svg" class="store-apple">
   </div>
 </div>
 
@@ -531,7 +561,7 @@
 
 </div>
 
-<!-- MARCA GRANDE COMO IMAGEN -->
+<!-- LOGO GRANDE AZUL -->
 <img src="img/footer/logo banco azul.svg" class="footer-brand-img">
 </footer>
 
